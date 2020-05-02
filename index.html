@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="welcome-page" id="welcome-page">
+    <h1>Welcome To The Game</h1>
+    <div class="start-game-timer-output" id="start-game-timer-output">
+    </div>
+    <img src="characters/versus.png" width="150px" height="150px"><br>
+    <button class="start-game-button" type="button" name="button" onClick="displayGame()">Start Game</button>
+  </div>
+  <div class="game-over" id="game-over">
+    <h1>Game Over</h1>
+    <h3><span id="reload-timer-output"></span></h3>
+    <img src="characters/sadface.png" width="100px" height="100px">
+  </div>
+
+  <div class="game" id="game">
+    <!-- Opponent One -->
+    <div class="opponent" id="opponent">
+      <div class="opponent-image">
+        <h1>Squirtle</h1>
+        <img src="characters/squirtle.png" width="100px" height="100px"><br>
+        <small>Health: <span id="opponent-one-health-output"></span></small>
+      </div>
+      <h3>Opponent</h3>
+    </div>
+    <!-- Opponent Two -->
+    <div class="opponent-two" id="opponent-two">
+      <div class="opponent-image">
+        <h1>Psyduck</h1>
+        <img src="characters/psyduck.png" width="100px" height="100px"><br>
+        <small>Health: <span id="opponent-two-health-output"></span></small>
+      </div>
+    </div>
+    <!-- Opponent Three -->
+    <div class="opponent-three" id="opponent-three">
+      <div class="opponent-image">
+        <h1>Jigglypuff</h1>
+        <img src="characters/jigglypuff.png" width="100px" height="100px"><br>
+        <small>Health: <span id="opponent-three-health-output"></span></small>
+      </div>
+    </div>
+    <!-- Opponent Four -->
+    <div class="opponent-four" id="opponent-four">
+      <div class="opponent-image">
+        <h1>Boss Trainer 'Jim'</h1>
+        <img src="characters/boss-one.png" width="100px" height="100px"><br>
+        <small>Health: <span id="opponent-four-health-output"></span></small>
+      </div>
+    </div>
+    <!-- Opponent Five -->
+    <div class="opponent-five" id="opponent-five">
+      <div class="opponent-image">
+        <h1>An Egg</h1>
+        <img src="characters/egg.png" width="100px" height="100px"><br>
+        <small>Health: <span id="opponent-five-health-output"></span></small>
+      </div>
+    </div>
+    <!-- Arena Separator Line -->
+    <hr class="hr" id="hr">
+    <!-- Timer -->
+    <small class="game-message" id="game-message"></small>
+    <!-- Player -->
+    <div class="player" id="player">
+      <div class="player-image">
+        <h1>Snorlax</h1>
+        <img src="characters/snorlax.png" width="100px" height="100px"><br>
+      <small>Health: <span id="player-health-output"></span></small>
+      </div>
+        <button class="normal-attack-button" id="normal-attack-button" type="button" name="button" onClick="attackOneOpponent()">Attack</button>
+        <button class="normal-attack-button-two" id="normal-attack-button-two" type="button" name="button" onClick="attackTwoOpponent()">Attack</button>
+        <button class="normal-attack-button-three" id="normal-attack-button-three" type="button" name="button" onClick="attackThreeOpponent()">Attack</button>
+        <button class="normal-attack-button-four" id="normal-attack-button-four" type="button" name="button" onClick="attackFourOpponent()">Attack</button>
+        <button class="normal-attack-button-five" id="normal-attack-button-five" type="button" name="button" onClick="attackFiveOpponent()">Attack</button>
+
+        <button class="special-attack-button" id="special-attack-button" type="button" name="button">Special</button>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
