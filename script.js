@@ -29,7 +29,7 @@ const gameMessage = document.getElementById("game-message");
 
 //Character Attributes----------------------------------
 let player = {
-  health: 100,
+  health: 1000,
   normalAttack: 8,
   specialAttack: 13
 };
@@ -71,7 +71,7 @@ const displayGame = () => {
       welcomePage.style.display = 'none';
       game.style.display = 'block';
     }
-  }, 200);
+  }, 1000);
 
   startGameTimerOutput.style.visibility = 'visible';
   displayAttributes();
@@ -171,11 +171,11 @@ const attackOneOpponent = () => {
   opponentOneHealthOutput.innerHTML = `${opponentOneAttributes.health}`;
 
   normalAttackButton.disabled = true;
-  gameMessage.innerText = "Opponents turn to attack"
+  gameMessage.innerText = "Squirtle's turn to attack!"
 
   if(opponentOneAttributes.health <= 0) {
     opponentOneHealthOutput.innerHTML = 0;
-    gameMessage.innerText = "You've WON";
+    gameMessage.innerText = "You've WON, You beat Squirtle!";
     normalAttackButton.disabled = true;
     updateTwoOpponent();
     return;
@@ -188,7 +188,7 @@ const attackOneOpponent = () => {
     playerHealthOutput.innerHTML = `${player.health}`;
 
     normalAttackButton.disabled = false;
-    gameMessage.innerText = "Your turn to attack";
+    gameMessage.innerText = "Your turn to attack!";
 
     if(player.health <= 0) {
       playerHealthOutput.innerHTML = 0;
@@ -208,11 +208,11 @@ const attackTwoOpponent = () => {
   opponentTwoHealthOutput.innerHTML = `${opponentTwoAttributes.health}`;
 
   normalAttackButtonTwo.disabled = true;
-  gameMessage.innerText = "Opponent 2s turn to attack"
+  gameMessage.innerText = "Psyduck's turn to attack!"
 
   if(opponentTwoAttributes.health <= 0) {
     opponentTwoHealthOutput.innerHTML = 0;
-    gameMessage.innerText = "You've WON 2";
+    gameMessage.innerText = "You've WON, You beat Psyduck!";
     normalAttackButtonTwo.disabled = true;
     updateThreeOpponent();
     return;
@@ -225,7 +225,7 @@ const attackTwoOpponent = () => {
     playerHealthOutput.innerHTML = `${player.health}`;
 
     normalAttackButtonTwo.disabled = false;
-    gameMessage.innerText = "Your turn to attack";
+    gameMessage.innerText = "Your turn to attack!";
 
     if(player.health <= 0) {
       playerHealthOutput.innerHTML = 0;
@@ -245,11 +245,13 @@ const attackThreeOpponent = () => {
   opponentThreeHealthOutput.innerHTML = `${opponentThreeAttributes.health}`;
 
   normalAttackButtonThree.disabled = true;
-  gameMessage.innerText = "Opponent 3s turn to attack"
+  gameMessage.innerText = "Jigglypuff's turn to attack!"
 
   if(opponentThreeAttributes.health <= 0) {
     opponentThreeHealthOutput.innerHTML = 0;
+    gameMessage.innerText = "You've WON, You beat Jigglypuff!";
     normalAttackButtonThree.disabled = true;
+    updateFourOpponent();
     return;
   }
 
@@ -260,7 +262,7 @@ const attackThreeOpponent = () => {
     playerHealthOutput.innerHTML = `${player.health}`;
 
     normalAttackButtonThree.disabled = false;
-    gameMessage.innerText = "Your turn to attack";
+    gameMessage.innerText = "Your turn to attack!";
 
     if(player.health <= 0) {
       playerHealthOutput.innerHTML = 0;
@@ -280,11 +282,11 @@ const attackFourOpponent = () => {
   opponentFourHealthOutput.innerHTML = `${opponentFourAttributes.health}`;
 
   normalAttackButtonFour.disabled = true;
-  gameMessage.innerText = "Opponent 4s turn to attack"
+  gameMessage.innerText = "Trainer 'Jim's' turn to attack!"
 
   if(opponentFourAttributes.health <= 0) {
     opponentFourHealthOutput.innerHTML = 0;
-    gameMessage.innerText = "You've WON 4";
+    gameMessage.innerText = "You've WON, You beat Trainer 'Jim'!";
     normalAttackButtonFour.disabled = true;
     updateFiveOpponent();
     return;
@@ -297,7 +299,7 @@ const attackFourOpponent = () => {
     playerHealthOutput.innerHTML = `${player.health}`;
 
     normalAttackButtonFour.disabled = false;
-    gameMessage.innerText = "Your turn to attack";
+    gameMessage.innerText = "Your turn to attack!";
 
     if(player.health <= 0) {
       playerHealthOutput.innerHTML = 0;
@@ -317,11 +319,11 @@ const attackFiveOpponent = () => {
   opponentFiveHealthOutput.innerHTML = `${opponentFiveAttributes.health}`;
 
   normalAttackButtonFive.disabled = true;
-  gameMessage.innerText = "Opponent 5s turn to attack"
+  gameMessage.innerText = "Egg's turn to attack!"
 
   if(opponentFiveAttributes.health <= 0) {
     opponentFiveHealthOutput.innerHTML = 0;
-    gameMessage.innerText = "You've WON 5";
+    gameMessage.innerText = "You've WON, You beat the egg!";
     normalAttackButtonFive.disabled = true;
     updateSixOpponent();
     return;
@@ -334,7 +336,7 @@ const attackFiveOpponent = () => {
     playerHealthOutput.innerHTML = `${player.health}`;
 
     normalAttackButtonFive.disabled = false;
-    gameMessage.innerText = "Your turn to attack";
+    gameMessage.innerText = "Your turn to attack!";
 
     if(player.health <= 0) {
       playerHealthOutput.innerHTML = 0;
